@@ -21,6 +21,7 @@ body {
     min-height: 100vh;
 }
 .top-nav {
+    grid-area:header;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,11 +113,4 @@ body {
 
 
 
-
-
-
-
-.sidebar {
-    position:250px left fixed;
-}
 
