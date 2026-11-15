@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* 1. Dashboard Layout - CSS Grid */
+.dashboard-wrapper {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+    gap: 1rem;
+    min-height: 100vh;
+}
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #13347f;
+    padding: 1rem;
+}
+
+/* Sidebar Links - Flexbox */
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.sidebar a {
+    color: rgb(207, 97, 97);
+    text-decoration: none;
+}
+
+/* Main Content */
+.content-area {
+    grid-area: main;
+    padding: 1rem;
+}
+
+/* Movie Gallery - CSS Grid */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.movie-card {
+    padding: 1.5rem;
+    margin: 0.25rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    min-height: 200px;
+}
+
+.empty-section {
+    height: 300px;
+    margin-top: 2rem;
+    background-color: #e2e8f0;
+}
+
+.empty-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+
+
+@media (max-width: 600px) {
+    .dashboard-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main";
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .user-controls input {
+        width: 120px;
+    }
+}
+
+
+
+
+
+
+
+.sidebar {
+    position:250px left fixed;
+}
+
